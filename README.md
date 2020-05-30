@@ -23,6 +23,9 @@ network={
 
 ## Before you run the first time
 
+Use VirtualBox Ubuntu and size RPI's ext2 partition to 20G then create FAT32 partition for the rest of the space.
+Only then do the first run
+
 ```
 $ sudo parted /dev/sdb resizepart 2 20G
 $ sudo resize2fs /dev/sdb2 20G
