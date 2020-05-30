@@ -1,0 +1,15 @@
+[Unit]
+Description=Security Camera
+After=network-online.target
+ 
+[Service]
+ExecStart=/usr/bin/python3 /var/www/html/video/rpi_security_camera.py
+WorkingDirectory=/var/www/html/video
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+ 
+[Install]
+WantedBy=multi-user.target
+
