@@ -18,7 +18,8 @@ SIZE_LIMIT = 1024 * 1048576 # bytes
 class VideoFile:
     def __init__(self, dest=DESTINATION):
         self._filename = os.path.join(
-            dest, dt.datetime.utcnow().strftime('CAM-%Y%m%d-%H%M%S.mp4'))
+            dest, dt.datetime.utcnow().strftime('%m%d%H%M.mp4'))
+            #dest, dt.datetime.utcnow().strftime('CAM-%Y%m%d-%H%M%S.mp4'))
         # Use a VLC sub-process to handle muxing to MP4
         self._process = Popen([
             'cvlc',
