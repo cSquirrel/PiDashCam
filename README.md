@@ -37,3 +37,19 @@ Make sure WiFi works:
 $> ping raspberrypi.local
 $> ssh pi@raspberrypi.local
 ```
+
+## Setup dependencies
+Enable the camera `sudo raspi-config`
+Install python3 camera `sudo apt-get install python3-picamera`
+Install cvlc `sudo apt install -y vlc`
+
+## Setup the project
+```
+git clone ...
+cd PiDashCam
+python3 dashcam.py
+```
+
+```
+
+```
